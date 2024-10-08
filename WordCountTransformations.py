@@ -2,7 +2,7 @@ import apache_beam as beam
 
 with beam.Pipeline() as p:
     # Read lines from the input file
-    lines = p | 'Read' >> beam.io.ReadFromText('input.txt')
+    lines = p | 'Read' >> beam.io.ReadFromText('input.txt') # if the code throws error give full path to your input file eg. C:/users/user-name/input.txt
 
     # Split lines into words
     words = lines | 'SplitIntoWords' >> beam.FlatMap(lambda line: line.split())

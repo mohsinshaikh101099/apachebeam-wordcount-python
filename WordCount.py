@@ -4,7 +4,7 @@ with beam.Pipeline() as p:
 
     # Read lines from input file
 
-    lines = p | 'Read' >> beam.io.ReadFromText('input.txt')
+    lines = p | 'Read' >> beam.io.ReadFromText('input.txt') # if the code throws error give full path to your input file eg. C:/users/user-name/input.txt
 
     # Split each line into words and create a key-value pair (word, 1)
 
